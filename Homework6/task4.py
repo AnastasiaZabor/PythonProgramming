@@ -5,10 +5,10 @@
 def delet_all_word_from_the_text(string1:str, string2:str):
     words = string1.split(" ")
     new_str = ""
-    return [(lambda new_str: new_str + f'{word}')(new_str) for word in words if word.find(string2) == -1]
+    return " ".join([(lambda new_str: new_str + f'{word}')(new_str) for word in words if word.find(string2) == -1])
 
 string1 = input('Введите строку: ')
 string2 = input('Введите слово: ')
-new_str = delet_all_word_from_the_text(string1,string2)
+new_str = delet_all_word_from_the_text(string1, string2)
 print(new_str)
 
